@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:parkir_modern_ui/widgets/in_progress_widget.dart';
 import 'package:parkir_modern_ui/widgets/navigationbar.dart';
+import 'package:parkir_modern_ui/widgets/nearby_parking_widgets.dart';
 
 import '../widgets/hero_widgets.dart';
 
@@ -19,6 +20,8 @@ class Homepage extends StatelessWidget {
            HeroWidgets(),
            Gap(20),
            InProgressWidget(),
+            Gap(20),
+            NearbyParkingWidgets()
         ],
        ),
       ),

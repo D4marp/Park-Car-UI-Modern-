@@ -23,6 +23,13 @@ class InProgressWidget extends StatelessWidget {
            image: AssetImage('assets/images/bg_in_progress.png'),
            fit: BoxFit.cover,
          ),
+         boxShadow: [
+           BoxShadow(
+             color: ColorPalette.primaryColor.withOpacity(0.5),
+             blurRadius: 10,
+             offset: const Offset(0, 5),
+           ),
+         ],
         ),
         child: Row(
           children: [SvgPicture.asset('assets/svgs/grid.svg', height: 26 ,width: 26,),
