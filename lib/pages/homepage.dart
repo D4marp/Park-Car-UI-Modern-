@@ -1,38 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:parkir_modern_ui/theme/colors_pallete.dart';
- 
+import 'package:gap/gap.dart';
+import 'package:parkir_modern_ui/widgets/in_progress_widget.dart';
+import 'package:parkir_modern_ui/widgets/navigationbar.dart';
+
+import '../widgets/hero_widgets.dart';
+
 class Homepage extends StatelessWidget {
-  const  Homepage({super.key});
-   @override
+  const Homepage({super.key});
+
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-    bottomNavigationBar: BottomNavigationBar(
-      type: BottomNavigationBarType.fixed,
-      backgroundColor: ColorPalette.white,
-      selectedItemColor: ColorPalette.primaryColor,
-      unselectedItemColor: ColorPalette.grey,
-      showSelectedLabels: true,
-      items: const [
-        BottomNavigationBarItem(
-      icon: Icon(Icons.home),
-      label: 'Discover',
-        ),
-        BottomNavigationBarItem(
-      icon: Icon(Icons.search),
-      label: 'Orders',
-        ),
-        BottomNavigationBarItem(
-      icon: Icon(Icons.notifications),
-      label: 'Wallet',
-        ),
-        BottomNavigationBarItem(
-      icon: Icon(Icons.person),
-      label: 'Settings',
-        ),
-      ],
-    ),
+    return const Scaffold(
+      backgroundColor:  Color(0xFFF5F5F5),
+      bottomNavigationBar: Navigationbar(),
+      body: SingleChildScrollView(
+       child : Column(
+        children: [ 
+           HeroWidgets(),
+           Gap(20),
+           InProgressWidget(),
+        ],
+       ),
+      ),
     );
   }
-
-  
 }
